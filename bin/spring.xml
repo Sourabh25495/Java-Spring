@@ -3,40 +3,26 @@
 
 
 <beans>
-	<bean id = "triangle" class="org.sourabh.spring.Triangle" >
+	<bean id = "triangle" class="org.sourabh.spring.Triangle" autowire = "constructor" >
 	
-		<property name = "PointA" ref = "zeroPoint"/>
-		<property name = "PointB" ref = "Point2"/>
-		<property name = "PointC" ref = "Point3"/>
+
+																	
 	</bean>
 	
-	
-	<!-- method 1 -->
-	 <!-- <constructor-arg  index = "0" value= "Equilateral"/>
-		<constructor-arg  index = "1"  value= "20"/> -->
-		 
-		 
-		 <!-- method 2 -->
-<!-- 		 Define 3 different beans for 3 diffferent ofjects -->
 
-		<bean id = "zeroPoint" class = "org.sourabh.spring.Point">
+		<bean id = "pointA" class = "org.sourabh.spring.Point">
 			<property name = "x" value = "0"/>
 			<property name = "y" value = "0"/>
 		</bean>
 		
-		<bean id = "Point2" class = "org.sourabh.spring.Point">
+		<bean id = "pointB" class = "org.sourabh.spring.Point">
 			<property name = "x" value = "-20"/>
 			<property name = "y" value = "0"/>
 		</bean>
 		
-		<bean id = "Point3" class = "org.sourabh.spring.Point">
+		<bean id = "pointC" class = "org.sourabh.spring.Point">
 			<property name = "x" value = "20"/>
 			<property name = "y" value = "0"/>
 		</bean>
-
-
-		
-	
-	
 
 </beans>

@@ -1,5 +1,7 @@
 package org.sourabh.spring;
 
+import java.util.List;
+
 public class Triangle {
 	
 	
@@ -54,11 +56,13 @@ public class Triangle {
 		private Point pointA;
 		private Point pointB;
 		private Point pointC;
-		
-		
+	
+
 		public Point getPointA() {
 			return pointA;
 		}
+
+
 
 
 		public void setPointA(Point pointA) {
@@ -66,9 +70,13 @@ public class Triangle {
 		}
 
 
+
+
 		public Point getPointB() {
 			return pointB;
 		}
+
+
 
 
 		public void setPointB(Point pointB) {
@@ -76,9 +84,13 @@ public class Triangle {
 		}
 
 
+
+
 		public Point getPointC() {
 			return pointC;
 		}
+
+
 
 
 		public void setPointC(Point pointC) {
@@ -86,8 +98,10 @@ public class Triangle {
 		}
 
 
+
 		public void draw(){
 			// code goes here
+
 			System.out.println("Point A = "+ getPointA().getX() + ", " + getPointA().getY());
 			System.out.println("Point B = "+getPointB().getX() + ", " + getPointB().getY());
 			System.out.println("Point C = "+getPointC().getX() + ", " + getPointC().getY());
