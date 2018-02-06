@@ -3,8 +3,25 @@
 
 
 <beans>
-	<bean id = "triangle" class="org.sourabh.spring.Triangle" autowire = "constructor" >
 	
+	<!-- <bean id = "parenttriangle" class = "org.sourabh.spring.Triangle">
+		<property name="pointA" ref = "pointA"/>
+	</bean>
+	
+	
+	<bean id = "triangle1" class = "org.sourabh.spring.Triangle" parent = "parenttriangle">
+		<property name="pointB" ref = "pointC"/>
+		<property name="pointC" ref = "pointC"/>
+	</bean>
+	
+	<bean id = "triangle2" class = "org.sourabh.spring.Triangle" parent = "parenttriangle">
+		<property name="pointB" ref = "pointB"/>
+	</bean> -->
+	
+	<bean id = "triangle" class="org.sourabh.spring.Triangle" autowire = "constructor" init-method = "myInit" destroy-method= "cleanup">
+		<property name="pointA" ref = "pointA"/>
+		<property name="pointB" ref = "pointB"/>
+		<property name="pointC" ref = "pointC"/>
 
 																	
 	</bean>
